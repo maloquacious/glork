@@ -6,12 +6,13 @@ import Characters from '@/pages/Characters'
 import Scenes from '@/pages/Scenes'
 import Snowflake from '@/pages/Snowflake'
 import Projects from '@/pages/Projects'
+import Wireframe from '@/pages/Wireframe'
 
 export default function App() {
   return (
     <Layout>
       <Routes>
-        <Route path="/" element={<Navigate to="/projects" replace />} />
+        <Route path="/" element={<Navigate to="/wireframe" replace />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/projects/:id/overview" element={<Overview />} />
         <Route path="/projects/:id/outline" element={<Outline />} />
@@ -19,6 +20,7 @@ export default function App() {
         <Route path="/projects/:id/scenes" element={<Scenes />} />
         <Route path="/projects/:id/snowflake" element={<Snowflake />} />
         <Route path="*" element={<div className="p-6">Not Found</div>} />
+        <Route path="/wireframe" element={<Wireframe />} />
       </Routes>
     </Layout>
   )
